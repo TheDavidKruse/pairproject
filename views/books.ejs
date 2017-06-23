@@ -2,6 +2,7 @@
 
 <ol>
 <% for( var i = 0; i < bookList.length; i++){ %>
-    <li><%= bookList[i]['Book Title'] %></li>
+    <li><%= bookList[i]['Book Title'] %>
+    <a href='/books/delete/<%= bookList[i]["ID"] %>'>Delete</a></li>
     <% } %>
 </ol>
