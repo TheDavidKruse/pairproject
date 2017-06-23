@@ -1,0 +1,20 @@
+<h2>List of authors</h2>
+    <% var authList = []; %>
+    <% for(var i = 0; i < authorList.length; i++){ %>
+        <% var authorName = authorList[i]['Author 1 First Name'] +" "+ authorList[i]['Author 1 Last Name'] %>
+        <% if(!authList.includes(authorName)){ %>
+                <% authList.push(authorName); %>
+       <% } %>
+   <% } %>
+    <p>Number of authors: <%=authList.length %></p>
+<ol>
+<% for( var i = 0; i < authList.length; i++){ %>
+    <li><%= authorList[i]['author Title'] %>
+    <p><%= authList[i] %> <a href='/authors/delete/<%= authList[i] %>'>Delete</a> <a href="/books/edit/<%= authList[i] %>">Edit</a></p></li>
+    <% } %>
+</ol>
+
+<form action="/authors/filter" method="GET">
+    <input type="text" name="author1FirstName" value=""><input type="text" name="author1LastName" value="">
+    <input type="submit" name="" value="Search By Author">
+</form>

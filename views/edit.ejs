@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <form action="/books/edit" method="POST">
+    <input type="hidden" name="ID" value="<%=bookToEdit.ID%>">
+    <br>
+    <p>Title: </p><br>
+    <input type="text" name="bookTitle" value="<%=bookToEdit['Book Title'] %>">
+    <br>
+    <p>Genre: </p>
+    <input type="text" name="bookGenre" value="<%= bookToEdit['Book Genre'] %>">
+    <br>
+    <p>Author: </p><br>
+    <input type="text" name="author1FirstName" value="<%=bookToEdit['Author 1 First Name']%>"><input type="text" name="author1LastName" value="<%=bookToEdit['Author 1 Last Name']%>">
+    <br>
+    <input type="submit" name="" value="Submit">
+    
+
+
+        
+    </form>
+    </body>
+</html>

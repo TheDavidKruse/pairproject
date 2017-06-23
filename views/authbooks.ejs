@@ -7,9 +7,3 @@
     <p>Author: <%= bookList[i]['Author 1 First Name'] %> <%= bookList[i]['Author 1 Last Name'] %></p></li>
     <% } %>
 </ol>
-
-<form action="/books/filter" method="GET">
-    <input type="text" name="author1FirstName" value=""><input type="text" name="author1LastName" value="">
-    <input type="submit" name="" value="Search By Author">
-</form>
-<a href="/books/authbooks">books</a>
